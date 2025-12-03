@@ -1,15 +1,14 @@
 "use client";
 
 import React from 'react';
-import { 
-  Target, 
-  Shield, 
-  TrendingUp, 
+import {
+  Target,
+  Shield,
+  TrendingUp,
   Award,
   Users,
   Building2,
-  HeartHandshake,
-  CheckCircle2
+  HeartHandshake
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -17,40 +16,48 @@ import Footer from '@/components/Footer';
 export default function AboutPage() {
   const values = [
     {
-      icon: Shield,
-      title: "Quality Assured",
-      desc: "Every project meets the highest standards of construction and compliance with Australian regulations."
+      icon: Users,
+      title: "Community First",
+      desc: "We build for the people who will live in our projects—not for abstract market profiles. Our developments reflect the needs, aspirations, and cultural realities of Australia’s multicultural population."
     },
     {
-      icon: Target,
-      title: "Community Focused",
-      desc: "We prioritize social impact and community wellbeing in every development we undertake."
+      icon: Shield,
+      title: "Integrity in Delivery",
+      desc: "We honour our commitments. With strong governance practices and deep institutional experience, we hold ourselves to the highest standards of transparency, quality, and accountability."
+    },
+    {
+      icon: HeartHandshake,
+      title: "Partnership at the Core",
+      desc: "We collaborate with governments, local councils, NGOs, financiers, and community leaders. Our strength lies in building strong, trusting partnerships that unlock shared value."
     },
     {
       icon: TrendingUp,
-      title: "Sustainable Growth",
-      desc: "Building with environmental responsibility and long-term sustainability at the forefront."
+      title: "Agility with Purpose",
+      desc: "We operate differently—lean, responsive, and adaptive. Our team blends entrepreneurial innovation with the discipline of major institutions to move projects from concept to completion efficiently."
     },
     {
-      icon: Award,
-      title: "Proven Excellence",
-      desc: "Recognized by government partners and industry leaders for outstanding project delivery."
+      icon: Target,
+      title: "Social Impact, Not Just Structures",
+      desc: "Every development is an opportunity to uplift a community, create belonging, and support economic mobility. We measure success beyond returns—we measure dignity, outcomes, and opportunity."
     }
   ];
 
-  const milestones = [
-    { year: "2020", title: "Company Founded", desc: "HavenBridge Development established with a vision for community-focused property development." },
-    { year: "2021", title: "First Major Project", desc: "Completed our first modular housing development in Melbourne." },
-    { year: "2022", title: "Government Partnership", desc: "Secured first government partnership for social housing initiatives." },
-    { year: "2023", title: "National Expansion", desc: "Expanded operations across multiple Australian states and territories." },
-    { year: "2024", title: "200+ Homes Delivered", desc: "Reached milestone of 200+ homes and units delivered to communities." }
-  ];
-
-  const team = [
-    { name: "Leadership Team", count: "15+", desc: "Experienced executives and directors" },
-    { name: "Development Team", count: "50+", desc: "Skilled architects and project managers" },
-    { name: "Construction Team", count: "200+", desc: "Certified builders and tradespeople" },
-    { name: "Support Staff", count: "30+", desc: "Dedicated administrative and support professionals" }
+  const leadership = [
+    {
+      name: "John Kuot",
+      title: "Chief Executive Officer",
+      bio: "Former banker and Ministerial Advisor in the environment portfolio with direct experience in homelessness and public housing responses, including the Flemington public housing tower lockdown. Brings deep understanding of Victorian government policy, planning overlays, and social outcome frameworks."
+    },
+    {
+      name: "Angok Lueth",
+      title: "Director of Development",
+      bio: "Former banker with 12 years of development experience across townhouses, rooming houses, shopping centres, mixed-use projects, SDA accommodation, NDIS housing, and community accommodation. Highly experienced in planning approvals and on-time, on-budget project delivery."
+    },
+    {
+      name: "Him Malhotra",
+      title: "Director of Acquisitions",
+      bio: "Land acquisition specialist with extensive networks across Melbourne’s key growth corridors. Proven ability to source off-market sites and structure complex development deals that unlock value for community benefit."
+    }
   ];
 
   return (
@@ -66,7 +73,8 @@ export default function AboutPage() {
               About <span className="text-amber-400">HavenBridge</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Building communities and creating homes across Australia with premium property development solutions.
+              HavenBridge Development is a values-led property development and project management firm grounded in the diversity,
+              resilience, and ambition of modern Australia.
             </p>
           </div>
         </div>
@@ -77,17 +85,62 @@ export default function AboutPage() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 text-center">
-              Our Story
+              Our Story: Built by the Community, for the Community
             </h2>
             <div className="prose prose-lg max-w-none text-gray-600 space-y-4">
               <p>
-                HavenBridge Development was founded with a clear mission: to address Australia's housing challenges through innovative, community-focused property development. We believe that everyone deserves access to quality, affordable housing, and we're committed to making that vision a reality.
+                HavenBridge Development is a values-led property development and project management firm founded by leaders who represent
+                the diversity, resilience, and ambition of modern Australia. As part of the 50% of Australians who trace their roots beyond
+                the country’s borders, we understand what it means to be misunderstood, overlooked, or excluded. That lived experience
+                shapes how we build, how we partner, and how we deliver.
               </p>
               <p>
-                Since our inception, we've grown from a small Melbourne-based developer to a national leader in modular housing, social housing, and community development projects. Our team combines decades of industry experience with fresh perspectives and innovative approaches.
+                We specialise in community-focused housing solutions that uplift migrant communities, enable government priorities,
+                and deliver long-term value for partners and investors. Our projects sit at the intersection of social impact,
+                commercial excellence, and cultural insight—bringing forward developments that are financially sound, socially responsible,
+                and deeply connected to the people who will ultimately call them home.
               </p>
               <p>
-                We specialize in working with government agencies, community organizations, and private investors to deliver projects that create lasting positive impact. From modular homes to aged care facilities, every project we undertake is designed with the community's needs at its heart.
+                At HavenBridge, we operate with the discipline of major institutions and the agility of an entrepreneurial team.
+                We have been shaped by world-class global organisations—but raised, grounded, and inspired by the communities who depend
+                on better housing solutions. This dual perspective enables us to bridge worlds: the world of capital, policy, and development;
+                and the world of lived experience, community, and belonging.
+              </p>
+              <p>
+                We exist to build places that feel like home—projects that speak to the aspirations of the people they serve,
+                and that stand as long-term assets for governments, partners, and investors.
+              </p>
+              <p className="font-semibold text-slate-900">
+                HavenBridge is not simply developing property. We are developing futures.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision & Mission */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
+            <div>
+              <h3 className="text-sm font-semibold tracking-wide text-amber-500 mb-2">
+                Vision
+              </h3>
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                Australia’s leading inclusive housing developer
+              </h2>
+              <p className="text-gray-600">
+                To be Australia’s leading developer—where commercial excellence, multicultural insight, and government partnership
+                come together to shape a more inclusive housing future.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold tracking-wide text-amber-500 mb-2">
+                Mission
+              </h3>
+              <p className="text-gray-600">
+                Our mission is to create dignified, community-focused housing that reflects the lived experiences of multicultural
+                Australians and strengthens their sense of belonging.
               </p>
             </div>
           </div>
@@ -106,7 +159,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, i) => (
               <div key={i} className="text-center">
                 <div className="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
@@ -120,53 +173,34 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Milestones */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Our Journey
-            </h2>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              {milestones.map((milestone, i) => (
-                <div key={i} className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-amber-500 flex items-center justify-center">
-                      <span className="text-slate-900 font-bold">{milestone.year}</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 pb-8 border-b border-gray-200 last:border-0">
-                    <h3 className="text-2xl font-bold text-slate-900 mb-2">{milestone.title}</h3>
-                    <p className="text-gray-600">{milestone.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Team */}
+      {/* Leadership Team */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Our Team
+              Leadership Team
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A diverse team of professionals dedicated to excellence.
+              HavenBridge Developments is a faith-grounded, multicultural-focused property development and advisory firm purpose-built
+              to address housing inequity. Our leadership brings expertise across government policy, development delivery, and community engagement.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((item, i) => (
-              <div key={i} className="bg-white p-6 rounded-2xl shadow-lg text-center">
-                <div className="text-4xl font-bold text-amber-500 mb-2">{item.count}</div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{item.name}</h3>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {leadership.map((person, i) => (
+              <div key={i} className="bg-white p-8 rounded-2xl shadow-lg">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center">
+                    <Users className="w-6 h-6 text-slate-900" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900">{person.name}</h3>
+                    <p className="text-sm font-semibold text-amber-600">{person.title}</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {person.bio}
+                </p>
               </div>
             ))}
           </div>

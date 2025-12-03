@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Building2, Menu, X } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,18 +27,23 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-lg py-4' : 'bg-slate-900/95 backdrop-blur-sm py-5'
+      scrolled ? 'bg-white shadow-lg py-2' : 'bg-slate-900/95 backdrop-blur-sm py-2'
     }`}>
-      <div className="container mx-auto px-6 lg:px-12">
+      <div className="container mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="flex items-center gap-3">
-            <div className={`w-12 h-12 rounded-lg flex items-center justify-center transition-all ${
-              scrolled 
-                ? 'bg-linear-to-br from-amber-500 to-yellow-500' 
-                : 'bg-amber-500'
-            }`}>
-              <Building2 className="w-7 h-7 text-slate-900" />
+            <div className="relative w-25 h-25 rounded-lg overflow-hidden flex items-center justify-center">
+              <Image
+                src="/logo.png"
+                alt="HavenBridge logo"
+                fill
+                className="object-contain"
+                sizes="80px"
+                quality={100}
+                priority
+                unoptimized
+              />
             </div>
             <div>
               <h1 className={`text-2xl font-bold transition-colors ${

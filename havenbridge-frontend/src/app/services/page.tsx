@@ -22,99 +22,85 @@ export default function ServicesPage() {
   const services = [
     { 
       icon: Home, 
-      title: "Modular Home Construction", 
-      desc: "Fast, sustainable, and high-quality modular housing solutions tailored for modern living.",
+      title: "Affordable & Social Housing Development",
+      desc: "Turnkey affordable and social housing developments delivered in partnership with NGOs, housing associations, councils, and government programs including HAFF and the Big Housing Build.",
       features: [
-        "Pre-fabricated construction for faster delivery",
-        "Energy-efficient and sustainable materials",
-        "Customizable designs to suit your needs",
-        "Compliance with Australian building standards"
+        "Feasibility, design, and delivery of affordable and social housing projects",
+        "Alignment with federal and state programs including HAFF and Big Housing Build",
+        "Partnerships with community housing providers and NGOs",
+        "Planning and delivery frameworks that support long-term social outcomes"
       ],
       link: "/contact"
     },
     { 
       icon: Building, 
-      title: "Rooming Houses Development", 
-      desc: "Affordable rooming house solutions designed for community living and accessibility.",
+      title: "Rooming Houses & Community Accommodation",
+      desc: "High-yield, fully compliant rooming house and community accommodation projects across Wyndham, Brimbank, Casey, Dandenong and other key growth corridors.",
       features: [
-        "Affordable housing solutions",
-        "Community-focused design",
-        "Accessibility compliance",
-        "Strategic location planning"
+        "End-to-end delivery of compliant rooming house developments",
+        "Expertise across Wyndham, Brimbank, Casey, Dandenong and key growth areas",
+        "Feasibility assessments, design management, and permits",
+        "Construction management focused on on-time, on-budget outcomes"
+      ],
+      link: "/contact"
+    },
+    { 
+      icon: Heart, 
+      title: "Aged Care & NDIS Developments", 
+      desc: "Faith- and culturally-aligned aged care homes and supported-living solutions, including SIL and SDA-compliant housing.",
+      features: [
+        "Design and delivery of aged care and supported independent living environments",
+        "SDA and NDIS-compliant housing solutions",
+        "Culturally responsive models of care and accommodation",
+        "Integration with faith-based and community organisations"
       ],
       link: "/contact"
     },
     { 
       icon: Baby, 
       title: "Childcare Centre Development", 
-      desc: "Purpose-built childcare facilities designed for safety, learning, and community engagement.",
+      desc: "End-to-end childcare centre development from site identification through to compliant delivery aligned with Victorian Education & Care regulations.",
       features: [
-        "Child-safe design and materials",
-        "Educational space optimization",
-        "Outdoor play areas",
-        "Regulatory compliance"
-      ],
-      link: "/contact"
-    },
-    { 
-      icon: Heart, 
-      title: "Aged Care Facilities", 
-      desc: "Compassionate aged care environments built with dignity, comfort, and wellbeing in mind.",
-      features: [
-        "Accessibility-first design",
-        "Medical facility integration",
-        "Comfortable living spaces",
-        "Safety and security features"
+        "Site identification and feasibility studies",
+        "Planning permits and stakeholder engagement",
+        "Design and delivery aligned with Victorian Education & Care regulations",
+        "Centres designed for safety, learning, and community engagement"
       ],
       link: "/contact"
     },
     { 
       icon: HeartHandshake, 
-      title: "Community Housing Solutions", 
-      desc: "Inclusive and affordable housing for migrant and diverse communities across Australia.",
+      title: "Cabin Parks & Modular Housing", 
+      desc: "Modular cabin parks for transitional housing, crisis accommodation, workers villages, and faith-based community housing.",
       features: [
-        "Cultural sensitivity in design",
-        "Affordable housing models",
-        "Community integration",
-        "Long-term sustainability"
+        "Design and delivery of modular cabin parks for transitional and crisis accommodation",
+        "Solutions for workers villages and regional communities",
+        "Flexible, scalable layouts tailored to community and stakeholder needs",
+        "Fast deployment using high-quality modular construction"
       ],
       link: "/contact"
     },
     { 
       icon: Handshake, 
-      title: "Government Partnership Programs", 
-      desc: "Collaborative development programs with government agencies for social housing initiatives.",
+      title: "Development & Project Management", 
+      desc: "End-to-end development and project management across feasibility, approvals, procurement, and delivery.",
       features: [
-        "Government compliance",
-        "Social housing expertise",
-        "Grant and funding support",
-        "Public-private partnerships"
+        "Full lifecycle management from concept to completion",
+        "Feasibility studies and option analysis",
+        "Stakeholder and council engagement",
+        "Builder procurement and contract management"
       ],
       link: "/contact"
     }
   ];
 
-  const values = [
-    {
-      icon: Shield,
-      title: "Quality Assured",
-      desc: "Every project meets the highest standards of construction and compliance."
-    },
-    {
-      icon: Target,
-      title: "Community Focused",
-      desc: "We prioritize social impact and community wellbeing in every development."
-    },
-    {
-      icon: TrendingUp,
-      title: "Sustainable Growth",
-      desc: "Building with environmental responsibility and long-term sustainability."
-    },
-    {
-      icon: Award,
-      title: "Proven Excellence",
-      desc: "Recognized by government partners and industry leaders for outstanding delivery."
-    }
+  const developmentManagementFeatures = [
+    "Feasibility",
+    "Council approvals",
+    "Builder procurement",
+    "Project oversight",
+    "Budgets & reporting",
+    "Risk management"
   ];
 
   return (
@@ -130,7 +116,8 @@ export default function ServicesPage() {
               Our <span className="text-amber-400">Services</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive property development solutions across Australia, from modular homes to government partnerships.
+              Comprehensive property development solutions across Australia—centred on affordable housing, social impact, and
+              multicultural communities.
             </p>
           </div>
         </div>
@@ -172,28 +159,39 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Our Values */}
+      {/* Development & Project Management */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Why Choose HavenBridge?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our commitment to excellence drives every project we undertake.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, i) => (
-              <div key={i} className="text-center">
-                <div className="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <value.icon className="w-10 h-10 text-cyan-500" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{value.title}</h3>
-                <p className="text-gray-600">{value.desc}</p>
+          <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-10">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="bg-cyan-500 inline-flex p-4 rounded-lg">
+                <Handshake className="w-8 h-8 text-white" />
               </div>
-            ))}
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+                  Development & Project Management
+                </h2>
+                <p className="text-gray-600 text-sm md:text-base">
+                  Full project lifecycle management from early feasibility through to delivery and handover.
+                </p>
+              </div>
+            </div>
+
+            <ul className="space-y-3 mb-6">
+              {developmentManagementFeatures.map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700 text-sm md:text-base">{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="/contact"
+              className="inline-flex items-center text-amber-500 font-semibold hover:gap-2 transition-all"
+            >
+              Discuss a project <ArrowRight className="w-4 h-4 ml-1" />
+            </a>
           </div>
         </div>
       </section>

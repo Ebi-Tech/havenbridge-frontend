@@ -4,12 +4,12 @@ import { Building2 } from 'lucide-react';
 
 export default function Footer() {
   const services = [
-    'Modular Home Construction',
-    'Rooming Houses Development',
+    'Affordable & Social Housing Development',
+    'Rooming Houses & Community Accommodation',
+    'Aged Care & NDIS Housing',
     'Childcare Centre Development',
-    'Aged Care Facilities',
-    'Community Housing Solutions',
-    'Government Partnership Programs'
+    'Cabin Parks & Modular Housing',
+    'Development & Project Management'
   ];
 
   return (
@@ -23,12 +23,12 @@ export default function Footer() {
                 <Building2 className="w-7 h-7 text-slate-900" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">HavenBridge</h3>
-                <p className="text-xs text-amber-400">Development</p>
+                <h3 className="text-xl font-bold">HavenBridge Developments Pty Ltd</h3>
+                <p className="text-xs text-amber-400">Property Development • Project Management • Advisory</p>
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Building communities and creating homes across Australia with premium property development solutions.
+              A values-led property development and project management firm creating dignified, community-focused housing across Australia.
             </p>
           </div>
 
@@ -74,8 +74,8 @@ export default function Footer() {
               </li>
               <li>
                 <strong className="text-white">Address:</strong><br />
-                Melbourne, Victoria<br />
-                Australia
+                Level 8, 90 Collins Street<br />
+                Melbourne, Victoria, Australia
               </li>
             </ul>
           </div>

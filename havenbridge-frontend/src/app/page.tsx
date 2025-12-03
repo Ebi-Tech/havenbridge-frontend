@@ -1,10 +1,9 @@
 "use client";
 
 import React from 'react';
-import { 
-  Building2, 
-  Users, 
-  HeartHandshake, 
+import {
+  Building2,
+  HeartHandshake,
   Home,
   Building,
   Baby,
@@ -24,40 +23,40 @@ import Footer from '@/components/Footer';
 export default function HavenBridgeLanding() {
   const services = [
     { 
-      icon: Home, 
-      title: "Modular Home Construction", 
-      desc: "Fast, sustainable, and high-quality modular housing solutions tailored for modern living.",
-      link: "/services/modular-homes"
+      icon: Home,
+      title: "Affordable & Social Housing Development",
+      desc: "Community-focused housing solutions aligned with government programs like HAFF and the Big Housing Build.",
+      link: "/services"
     },
     { 
-      icon: Building, 
-      title: "Rooming Houses Development", 
-      desc: "Affordable rooming house solutions designed for community living and accessibility.",
-      link: "/services/rooming-houses"
+      icon: Building,
+      title: "Rooming Houses & Community Accommodation",
+      desc: "High-yield, fully compliant rooming house and community accommodation developments across key growth corridors.",
+      link: "/services"
     },
     { 
-      icon: Baby, 
-      title: "Childcare Centre Development", 
-      desc: "Purpose-built childcare facilities designed for safety, learning, and community engagement.",
-      link: "/services/childcare"
+      icon: Heart,
+      title: "Aged Care & NDIS Housing",
+      desc: "Faith- and culturally-aligned aged care, SIL, and SDA housing designed for dignity, safety, and inclusion.",
+      link: "/services"
     },
     { 
-      icon: Heart, 
-      title: "Aged Care Facilities", 
-      desc: "Compassionate aged care environments built with dignity, comfort, and wellbeing in mind.",
-      link: "/services/aged-care"
+      icon: Baby,
+      title: "Childcare Centre Development",
+      desc: "End-to-end delivery of compliant childcare centres aligned with Victorian Education & Care regulations.",
+      link: "/services"
     },
     { 
       icon: HeartHandshake, 
-      title: "Community Housing Solutions", 
-      desc: "Inclusive and affordable housing for migrant and diverse communities across Australia.",
-      link: "/services/community-housing"
+      title: "Cabin Parks & Modular Housing",
+      desc: "Modular cabin parks for transitional housing, crisis accommodation, workers villages, and faith-based housing.",
+      link: "/services"
     },
     { 
       icon: Handshake, 
-      title: "Government Partnership Programs", 
-      desc: "Collaborative development programs with government agencies for social housing initiatives.",
-      link: "/services/government-partnerships"
+      title: "End-to-End Development Management",
+      desc: "Full lifecycle development and project management from feasibility through delivery and risk management.",
+      link: "/services"
     }
   ];
 
@@ -94,54 +93,54 @@ export default function HavenBridgeLanding() {
     <div className="bg-white font-sans">
       <Navbar />
 
-      {/* Hero Section - LongView Style */}
+      {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-slate-900 overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-br from-blue-900/30 to-slate-900"></div>
         
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
             <div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                New Solutions To<br />
-                Australia's Housing<br />
-                <span className="text-amber-400">Problems</span>
+                Building Communities.<br />
+                Delivering <span className="text-amber-400">Impact.</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Wherever you are in your property journey, HavenBridge helps you go further with modern, community-focused development solutions.
+              <p className="text-xl md:text-2xl text-gray-300 mb-6 leading-relaxed">
+                Affordable Housing • Rooming Houses • Aged Care • Childcare • Modular Living • Project Management
+              </p>
+              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                HavenBridge develops community-focused housing that uplifts migrant communities, enables government priorities,
+                and delivers long-term value for partners and investors.
               </p>
               <a 
                 href="/contact"
                 className="inline-block bg-amber-500 text-slate-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-amber-400 transition-all shadow-xl"
               >
-                Get in Touch
+                Book a Consultation
               </a>
             </div>
 
-            {/* Right Image */}
             <div className="relative">
               <div className="aspect-4/3 rounded-2xl overflow-hidden bg-linear-to-br from-slate-700 to-slate-600">
-                {/* Placeholder for hero image */}
                 <div className="w-full h-full flex items-center justify-center text-white/20">
                   <Building2 className="w-32 h-32" />
                 </div>
               </div>
-              {/* Decorative circle */}
               <div className="absolute -top-10 -right-10 w-64 h-64 bg-cyan-400 rounded-full opacity-20 blur-3xl"></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How Can We Help - Services Grid */}
+      {/* Our Core Services */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              How Can We Help?
+              Our Core Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We understand and service every aspect of property development, from modular homes to government partnerships.
+              From affordable and social housing to childcare, aged care, and modular cabin parks, we deliver developments that are
+              financially sound, socially responsible, and culturally informed.
             </p>
           </div>
 
@@ -175,7 +174,7 @@ export default function HavenBridgeLanding() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">Not sure? Contact us for guidance</p>
+            <p className="text-gray-600 mb-4">Not sure which pathway is right for you?</p>
             <a 
               href="/contact"
               className="inline-block bg-slate-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-slate-800 transition-all"
@@ -186,25 +185,73 @@ export default function HavenBridgeLanding() {
         </div>
       </section>
 
-      {/* Our Values and Impact */}
+      {/* Why HavenBridge */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Our Values and Impact
+              Why HavenBridge
             </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              A developer with institutional capability, community insight, and a deep commitment to social impact.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, i) => (
-              <div key={i} className="text-center">
-                <div className="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <value.icon className="w-10 h-10 text-cyan-500" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{value.title}</h3>
-                <p className="text-gray-600">{value.desc}</p>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                A Developer with Dual Advantage
+              </h3>
+              <p className="text-gray-600">
+                Our team has been trained by major global institutions, bringing world-class standards in finance, governance,
+                planning, and project delivery. At the same time, our lived experience keeps us deeply connected to the communities we serve.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                We Understand the Communities Who Will Live in These Homes
+              </h3>
+              <p className="text-gray-600">
+                We come from migrant backgrounds, multicultural communities, and real lived experiences of housing insecurity.
+                That authenticity ensures our developments are grounded, relevant, and human-centred.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                We Deliver Value Aligned With Government Priorities
+              </h3>
+              <p className="text-gray-600">
+                From affordable housing to multicultural engagement, social impact investment, and community infrastructure,
+                our projects directly support federal, state, and local government objectives.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                Agile Delivery with High-Standard Governance
+              </h3>
+              <p className="text-gray-600">
+                We operate like an agile startup but carry the governance discipline of a major property institution.
+                This makes us fast, reliable, and accountable—ideal partners for government and impact investors.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                We Build Trust Through Transparency
+              </h3>
+              <p className="text-gray-600">
+                Clear financial models, realistic timelines, community consultations, and honest conversations.
+                We are building a reputation as a developer that puts clarity before complexity.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                Our Developments Strengthen Social Cohesion
+              </h3>
+              <p className="text-gray-600">
+                Housing is not just infrastructure—it is nation-building. Our work ensures multicultural communities are not left behind
+                but are uplifted through access to safe, affordable, and dignified homes.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -255,17 +302,17 @@ export default function HavenBridgeLanding() {
       <section className="py-20 bg-linear-to-br from-slate-900 via-blue-900 to-slate-800 text-white">
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Ready to Build Something<br />
-            <span className="text-amber-400">Great Together?</span>
+            Let&apos;s Build Something<br />
+            <span className="text-amber-400">That Lasts.</span>
           </h2>
           <p className="text-xl mb-10 max-w-2xl mx-auto text-gray-200">
-            Partner with us for your next community development project and create lasting impact.
+            Book your consultation today and partner with a developer that understands both community and capital.
           </p>
           <a 
             href="/contact"
             className="inline-block bg-amber-500 text-slate-900 px-12 py-5 text-xl font-bold rounded-lg hover:bg-amber-400 transition-all shadow-2xl"
           >
-            Start Your Project Today
+            Book a Consultation
           </a>
         </div>
       </section>
