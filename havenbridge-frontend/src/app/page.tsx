@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 
 // Main Landing Page
 export default function HavenBridgeLanding() {
@@ -100,13 +101,11 @@ export default function HavenBridgeLanding() {
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Building Communities.<br />
                 Delivering <span className="text-amber-400">Impact.</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-6 leading-relaxed">
-                Affordable Housing • Rooming Houses • Aged Care • Childcare • Modular Living • Project Management
-              </p>
+              
               <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                 HavenBridge develops community-focused housing that uplifts migrant communities, enables government priorities,
                 and delivers long-term value for partners and investors.
@@ -120,9 +119,18 @@ export default function HavenBridgeLanding() {
             </div>
 
             <div className="relative">
-              <div className="aspect-4/3 rounded-2xl overflow-hidden bg-linear-to-br from-slate-700 to-slate-600">
-                <div className="w-full h-full flex items-center justify-center text-white/20">
-                  <Building2 className="w-32 h-32" />
+              <div className="relative aspect-4/3">
+                <div className="absolute inset-0 rounded-3xl  shadow-2xl p-2">
+                  <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                    <Image
+                      src="/h.png"
+                      alt="Hero Image"
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                      priority
+                    />
+                  </div>
                 </div>
               </div>
               <div className="absolute -top-10 -right-10 w-64 h-64 bg-cyan-400 rounded-full opacity-20 blur-3xl"></div>
