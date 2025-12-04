@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React from "react";
 import {
   Building2,
   HeartHandshake,
@@ -14,314 +14,597 @@ import {
   TrendingUp,
   Shield,
   CheckCircle2,
-  ArrowRight
-} from 'lucide-react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Image from 'next/image';
+  ArrowRight,
+  Sparkles,
+  Zap,
+  ChevronRight,
+  Users,
+  Globe,
+  Clock,
+  Star,
+  MapPin,
+  Calendar,
+  Award as Trophy,
+  Target as Bullseye,
+  TrendingUp as Growth,
+  Shield as Protection
+} from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 // Main Landing Page
 export default function HavenBridgeLanding() {
   const services = [
-    { 
+    {
       icon: Home,
       title: "Affordable & Social Housing Development",
       desc: "Community-focused housing solutions aligned with government programs like HAFF and the Big Housing Build.",
-      link: "/services"
+      link: "/services",
+      imageUrl:
+        "https://plus.unsplash.com/premium_photo-1676983352797-a12800a05dfb?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      color: "from-amber-400 to-amber-500",
+      stats: "500+ Homes"
     },
-    { 
+    {
       icon: Building,
       title: "Rooming Houses & Community Accommodation",
       desc: "High-yield, fully compliant rooming house and community accommodation developments across key growth corridors.",
-      link: "/services"
+      link: "/services",
+      imageUrl: "https://media.istockphoto.com/id/1440036658/photo/row-of-townhouses-in-winter.webp?a=1",
+      color: "from-cyan-500 to-blue-500",
+      stats: "High Yield"
     },
-    { 
+    {
       icon: Heart,
       title: "Aged Care & NDIS Housing",
       desc: "Faith- and culturally-aligned aged care, SIL, and SDA housing designed for dignity, safety, and inclusion.",
-      link: "/services"
+      link: "/services",
+      color: "from-emerald-500 to-green-500",
+      stats: "Specialist Care"
     },
-    { 
+    {
       icon: Baby,
       title: "Childcare Centre Development",
       desc: "End-to-end delivery of compliant childcare centres aligned with Victorian Education & Care regulations.",
-      link: "/services"
+      link: "/services",
+      color: "from-violet-500 to-purple-500",
+      stats: "Family Focused"
     },
-    { 
-      icon: HeartHandshake, 
+    {
+      icon: HeartHandshake,
       title: "Cabin Parks & Modular Housing",
       desc: "Modular cabin parks for transitional housing, crisis accommodation, workers villages, and faith-based housing.",
-      link: "/services"
+      link: "/services",
+      color: "from-orange-500 to-red-500",
+      stats: "Flexible Solutions"
     },
-    { 
-      icon: Handshake, 
+    {
+      icon: Handshake,
       title: "End-to-End Development Management",
       desc: "Full lifecycle development and project management from feasibility through delivery and risk management.",
-      link: "/services"
-    }
+      link: "/services",
+      color: "from-indigo-500 to-purple-500",
+      stats: "Full Service"
+    },
   ];
 
   const values = [
     {
       icon: Shield,
       title: "Quality Assured",
-      desc: "Every project meets the highest standards of construction and compliance with Australian regulations."
+      desc: "Every project meets the highest standards of construction and compliance with Australian regulations.",
+      color: "bg-cyan-500/10",
+      iconColor: "text-cyan-500"
     },
     {
       icon: Target,
       title: "Community Focused",
-      desc: "We prioritize social impact and community wellbeing in every development we undertake."
+      desc: "We prioritize social impact and community wellbeing in every development we undertake.",
+      color: "bg-amber-400/10",
+      iconColor: "text-amber-400"
     },
     {
       icon: TrendingUp,
       title: "Sustainable Growth",
-      desc: "Building with environmental responsibility and long-term sustainability at the forefront."
+      desc: "Building with environmental responsibility and long-term sustainability at the forefront.",
+      color: "bg-emerald-500/10",
+      iconColor: "text-emerald-500"
     },
     {
       icon: Award,
       title: "Proven Excellence",
-      desc: "Recognized by government partners and industry leaders for outstanding project delivery."
-    }
+      desc: "Recognized by government partners and industry leaders for outstanding project delivery.",
+      color: "bg-violet-500/10",
+      iconColor: "text-violet-500"
+    },
   ];
 
   const projects = [
-    { name: "Melbourne Modular Village", location: "Melbourne, VIC", type: "Residential", units: "48 Homes" },
-    { name: "Sunrise Care Centre", location: "Sydney, NSW", type: "Aged Care", units: "80 Beds" },
-    { name: "Community Hub Brisbane", location: "Brisbane, QLD", type: "Mixed Use", units: "35 Units" }
+    {
+      name: "Melbourne Modular Village",
+      location: "Melbourne, VIC",
+      type: "Residential",
+      units: "48 Homes",
+      progress: "85%",
+      completion: "June 2025",
+      imageUrl:
+        "https://media.istockphoto.com/id/503943499/photo/arial-view-of-melbourne-australia.webp?a=1&b=1&s=612x612&w=0&k=20&c=9jkv3OfDvvclRiZdGbr8fdpUb_sipPifO-_u-k0bYv4=",
+      featured: true
+    },
+    {
+      name: "Sunrise Care Centre",
+      location: "Sydney, NSW",
+      type: "Aged Care",
+      units: "80 Beds",
+      progress: "Completed",
+      completion: "Dec 2024",
+      imageUrl:
+        "https://media.istockphoto.com/id/2247111233/photo/aerial-panorama-drone-view-of-a-inner-western-sydney-suburb-of-ashbury-urban-sprawl-and-the.webp?a=1&b=1&s=612x612&w=0&k=20&c=GZ2qqbC8uTN2T6NHxGkqavy82q_G3Psa3Rm9GfBhVZQ=",
+      featured: false
+    },
+    {
+      name: "Community Hub Brisbane",
+      location: "Brisbane, QLD",
+      type: "Mixed Use",
+      units: "35 Units",
+      progress: "60%",
+      completion: "Sep 2025",
+      imageUrl:
+        "https://media.istockphoto.com/id/1425748659/photo/aerial-view-of-brisbane-river-at-west-end.webp?a=1&b=1&s=612x612&w=0&k=20&c=1bcTRVw2tsSKiDBnTnbMkAYh0V-xkmkne7tdUZly9CY=",
+      featured: false
+    },
+  ];
+
+  const stats = [
+    { value: "500+", label: "Homes Delivered", icon: Home, color: "text-amber-400" },
+    { value: "$150M+", label: "Project Value", icon: TrendingUp, color: "text-cyan-500" },
+    { value: "95%", label: "Client Satisfaction", icon: Heart, color: "text-emerald-500" },
+    { value: "25+", label: "Industry Awards", icon: Trophy, color: "text-violet-500" },
+  ];
+
+  const whyChooseUs = [
+    {
+      title: "A Developer with Dual Advantage",
+      desc: "Our team has been trained by major global institutions, bringing world-class standards in finance, governance, planning, and project delivery. At the same time, our lived experience keeps us deeply connected to the communities we serve.",
+      icon: Globe,
+      color: "from-amber-400 to-orange-500"
+    },
+    {
+      title: "We Understand the Communities",
+      desc: "We come from migrant backgrounds, multicultural communities, and real lived experiences of housing insecurity. That authenticity ensures our developments are grounded, relevant, and human-centred.",
+      icon: Users,
+      color: "from-cyan-500 to-blue-500"
+    },
+    {
+      title: "Value Aligned With Government Priorities",
+      desc: "From affordable housing to multicultural engagement, social impact investment, and community infrastructure, our projects directly support federal, state, and local government objectives.",
+      icon: Shield,
+      color: "from-emerald-500 to-green-500"
+    },
+    {
+      title: "Agile Delivery with High-Standard Governance",
+      desc: "We operate like an agile startup but carry the governance discipline of a major property institution. This makes us fast, reliable, and accountable—ideal partners for government and impact investors.",
+      icon: Zap,
+      color: "from-violet-500 to-purple-500"
+    },
+    {
+      title: "We Build Trust Through Transparency",
+      desc: "Clear financial models, realistic timelines, community consultations, and honest conversations. We are building a reputation as a developer that puts clarity before complexity.",
+      icon: CheckCircle2,
+      color: "from-indigo-500 to-blue-500"
+    },
+    {
+      title: "Developments Strengthen Social Cohesion",
+      desc: "Housing is not just infrastructure—it is nation-building. Our work ensures multicultural communities are not left behind but are uplifted through access to safe, affordable, and dignified homes.",
+      icon: HeartHandshake,
+      color: "from-pink-500 to-rose-500"
+    },
   ];
 
   return (
     <div className="bg-white font-sans">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-slate-900 overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-blue-900/30 to-slate-900"></div>
-        
+      {/* Hero Section - Enhanced */}
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-amber-400/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-3/4 left-1/3 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Building Communities.<br />
-                Delivering <span className="text-amber-400">Impact.</span>
-              </h1>
-              
-              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                HavenBridge develops community-focused housing that uplifts migrant communities, enables government priorities,
-                and delivers long-term value for partners and investors.
+              {/* Animated header */}
+              <div className="relative inline-block mb-4">
+                <Sparkles className="absolute -top-4 -left-4 w-8 h-8 text-amber-400 animate-pulse" />
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                  Building
+                  <span className="block">
+                    Communities.
+                    <span className="relative ml-3">
+                      <span className="text-amber-400">Impact</span>
+                      <Sparkles className="absolute -top-2 -right-6 w-6 h-6 text-cyan-500 animate-pulse" />
+                    </span>
+                  </span>
+                </h1>
+              </div>
+
+              <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-xl">
+                HavenBridge develops community-focused housing that uplifts
+                migrant communities, enables government priorities, and delivers
+                long-term value for partners and investors.
               </p>
-              <a 
-                href="/contact"
-                className="inline-block bg-amber-500 text-slate-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-amber-400 transition-all shadow-xl"
-              >
-                Book a Consultation
-              </a>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="/contact"
+                  className="group relative inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:from-amber-500 hover:to-amber-400 transition-all shadow-xl overflow-hidden"
+                >
+                  {/* Glow effect */}
+                  <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-30 transition-opacity"></div>
+                  <span className="relative z-10">Book a Consultation</span>
+                  <ArrowRight className="relative z-10 w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a
+                  href="/projects"
+                  className="group relative inline-flex items-center justify-center bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold text-lg border border-white/20 hover:bg-white/20 transition-all"
+                >
+                  View Projects
+                  <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
             </div>
 
             <div className="relative">
-              <div className="relative aspect-4/3">
-                <div className="absolute inset-0 rounded-3xl  shadow-2xl p-2">
+              {/* Hero image with effects */}
+              <div className="relative aspect-4/3 group">
+                {/* Glow border */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-amber-400 to-cyan-500 rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+                
+                <div className="relative rounded-3xl shadow-2xl overflow-hidden border-4 border-white/10">
                   <div className="relative w-full h-full rounded-2xl overflow-hidden">
-                    <Image
+                    <img
                       src="/h.png"
                       alt="Hero Image"
-                      fill
-                      className="object-cover"
-                      sizes="(min-width: 1024px) 50vw, 100vw"
-                      priority
+                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                     />
+                    {/* Gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
+                  </div>
+                </div>
+                
+                {/* Floating stats */}
+                <div className="absolute -bottom-4 -right-4 bg-white rounded-xl p-4 shadow-2xl">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-cyan-500 p-2 rounded-lg">
+                      <Home className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-slate-900">500+</div>
+                      <div className="text-xs text-gray-600">Homes Built</div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="absolute -top-10 -right-10 w-64 h-64 bg-cyan-400 rounded-full opacity-20 blur-3xl"></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Core Services */}
+      {/* Stats Section */}
+      <section className="py-12 bg-gradient-to-r from-slate-50 to-cyan-50">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, i) => {
+              const Icon = stat.icon;
+              return (
+                <div key={i} className="group text-center">
+                  <div className="relative">
+                    <Icon className={`w-12 h-12 mx-auto mb-4 ${stat.color} transform group-hover:scale-110 transition-transform`} />
+                    <div className="text-4xl font-bold text-slate-900 mb-2">{stat.value}</div>
+                    <div className="text-gray-600 font-medium">{stat.label}</div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Core Services - Enhanced */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-cyan-500/10 rounded-full">
+              <Sparkles className="w-4 h-4 text-cyan-500" />
+              <span className="text-sm font-semibold text-cyan-600">WHAT WE DO</span>
+            </div>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
               Our Core Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From affordable and social housing to childcare, aged care, and modular cabin parks, we deliver developments that are
-              financially sound, socially responsible, and culturally informed.
+              From affordable and social housing to childcare, aged care, and
+              modular cabin parks, we deliver developments that are financially
+              sound, socially responsible, and culturally informed.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, i) => (
-              <a 
-                key={i}
-                href={service.link}
-                className="group relative overflow-hidden rounded-2xl bg-linear-to-br from-slate-900 to-slate-800 p-8 hover:shadow-2xl transition-all duration-300"
-              >
-                {/* Service image placeholder */}
-                <div className="aspect-video mb-6 rounded-lg overflow-hidden bg-slate-700">
-                  <div className="w-full h-full flex items-center justify-center">
-                    <service.icon className="w-16 h-16 text-white/20" />
-                  </div>
-                </div>
+              <div key={i} className="group relative">
+                {/* Glow effect */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-amber-400/20 to-cyan-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
                 
-                {/* Content overlay */}
-                <div className="relative">
-                  <div className="bg-cyan-500 inline-block p-3 rounded-lg mb-4">
-                    <service.icon className="w-8 h-8 text-white" />
+                <a
+                  href={service.link}
+                  className="relative overflow-hidden rounded-2xl bg-white border border-gray-100 p-6 hover:shadow-2xl transition-all duration-300 h-full flex flex-col"
+                >
+                  {/* Image with gradient overlay */}
+                  <div className="aspect-video mb-6 rounded-xl overflow-hidden relative">
+                    {service.imageUrl ? (
+                      <>
+                        <img
+                          src={service.imageUrl}
+                          alt={service.title}
+                          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+                      </>
+                    ) : (
+                      <div className={`w-full h-full bg-gradient-to-br ${service.color} flex items-center justify-center`}>
+                        <service.icon className="w-16 h-16 text-white/80" />
+                      </div>
+                    )}
+                    
+                    {/* Icon badge */}
+                    <div className={`absolute top-4 left-4 p-3 rounded-lg bg-gradient-to-br ${service.color}`}>
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    
+                    {/* Stats badge */}
+                    <div className="absolute top-4 right-4 px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full">
+                      <span className="text-sm font-bold text-slate-900">{service.stats}</span>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.desc}</p>
-                  <span className="inline-flex items-center text-amber-400 font-semibold group-hover:gap-2 transition-all">
-                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                  </span>
-                </div>
-              </a>
+
+                  {/* Content */}
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 line-clamp-3">{service.desc}</p>
+                  </div>
+                  
+                  {/* Learn More */}
+                  <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <span className="inline-flex items-center text-cyan-600 font-semibold group-hover:gap-2 transition-all">
+                      Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                    </span>
+                    <div className="text-xs font-medium px-2 py-1 rounded bg-gray-100 text-gray-700">
+                      Explore →
+                    </div>
+                  </div>
+                </a>
+              </div>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">Not sure which pathway is right for you?</p>
-            <a 
+            <p className="text-gray-600 mb-4">
+              Not sure which pathway is right for you?
+            </p>
+            <a
               href="/contact"
-              className="inline-block bg-slate-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-slate-800 transition-all"
+              className="group relative inline-flex items-center justify-center bg-gradient-to-r from-slate-900 to-slate-800 text-white px-8 py-3 rounded-lg font-bold hover:from-slate-800 hover:to-slate-700 transition-all shadow-lg"
             >
-              Contact Us
+              <span className="relative z-10">Contact Our Experts</span>
+              <ArrowRight className="relative z-10 w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
         </div>
       </section>
 
-      {/* Why HavenBridge */}
-      <section className="py-20 bg-gray-50">
+      {/* Why HavenBridge - Enhanced */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-cyan-50">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-amber-400/10 rounded-full">
+              <Star className="w-4 h-4 text-amber-400" />
+              <span className="text-sm font-semibold text-amber-600">WHY CHOOSE US</span>
+            </div>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
               Why HavenBridge
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A developer with institutional capability, community insight, and a deep commitment to social impact.
+              A developer with institutional capability, community insight, and
+              a deep commitment to social impact.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                A Developer with Dual Advantage
-              </h3>
-              <p className="text-gray-600">
-                Our team has been trained by major global institutions, bringing world-class standards in finance, governance,
-                planning, and project delivery. At the same time, our lived experience keeps us deeply connected to the communities we serve.
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                We Understand the Communities Who Will Live in These Homes
-              </h3>
-              <p className="text-gray-600">
-                We come from migrant backgrounds, multicultural communities, and real lived experiences of housing insecurity.
-                That authenticity ensures our developments are grounded, relevant, and human-centred.
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                We Deliver Value Aligned With Government Priorities
-              </h3>
-              <p className="text-gray-600">
-                From affordable housing to multicultural engagement, social impact investment, and community infrastructure,
-                our projects directly support federal, state, and local government objectives.
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                Agile Delivery with High-Standard Governance
-              </h3>
-              <p className="text-gray-600">
-                We operate like an agile startup but carry the governance discipline of a major property institution.
-                This makes us fast, reliable, and accountable—ideal partners for government and impact investors.
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                We Build Trust Through Transparency
-              </h3>
-              <p className="text-gray-600">
-                Clear financial models, realistic timelines, community consultations, and honest conversations.
-                We are building a reputation as a developer that puts clarity before complexity.
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                Our Developments Strengthen Social Cohesion
-              </h3>
-              <p className="text-gray-600">
-                Housing is not just infrastructure—it is nation-building. Our work ensures multicultural communities are not left behind
-                but are uplifted through access to safe, affordable, and dignified homes.
-              </p>
-            </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {whyChooseUs.map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <div key={i} className="group relative">
+                  {/* Background glow */}
+                  <div className={`absolute -inset-2 bg-gradient-to-br ${item.color} rounded-2xl blur-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                  
+                  <div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border border-gray-100">
+                    {/* Icon */}
+                    <div className={`p-4 rounded-xl bg-gradient-to-br ${item.color} w-fit mb-6`}>
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-cyan-600 transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {item.desc}
+                    </p>
+                    
+                    {/* Hover indicator */}
+                    <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="w-2 h-2 bg-gradient-to-r from-amber-400 to-cyan-500 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Featured Projects */}
-      <section className="py-20 bg-white">
+    
+
+      {/* Featured Projects - Enhanced */}
+      <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Featured Projects
-            </h2>
-            <p className="text-xl text-gray-600">Real impact through real developments</p>
+          <div className="flex items-center justify-between mb-16">
+            <div>
+              <div className="inline-flex items-center gap-2 mb-2 px-4 py-2 bg-cyan-500/10 rounded-full">
+                <Zap className="w-4 h-4 text-cyan-500" />
+                <span className="text-sm font-semibold text-cyan-600">FEATURED WORK</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
+                Featured Projects
+              </h2>
+              <p className="text-xl text-gray-600 mt-2">
+                Real impact through real developments
+              </p>
+            </div>
+            <a
+              href="/projects"
+              className="hidden md:inline-flex items-center gap-2 text-cyan-600 font-semibold hover:text-cyan-700 transition-colors group"
+            >
+              View All Projects <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {projects.map((project, i) => (
-              <div key={i} className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
-                <div className="aspect-4/3 bg-linear-to-br from-slate-800 to-slate-600 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
-                </div>
-                
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <div className="mb-2">
-                    <span className="bg-amber-500 text-slate-900 px-3 py-1 rounded-full text-xs font-bold">
-                      {project.type}
+              <div key={i} className="group relative">
+                {/* Featured badge */}
+                {project.featured && (
+                  <div className="absolute top-4 left-4 z-20">
+                    <span className="px-3 py-1.5 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 text-xs font-bold rounded-full flex items-center gap-1">
+                      <Star className="w-3 h-3" /> FEATURED
                     </span>
                   </div>
-                  <h3 className="text-2xl font-bold mb-1">{project.name}</h3>
-                  <p className="text-gray-300 text-sm mb-1">{project.location}</p>
-                  <p className="text-amber-400 text-sm font-semibold">{project.units}</p>
+                )}
+                
+                {/* Glow effect */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-amber-400/20 to-cyan-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+                
+                <div className="relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 group">
+                  {/* Image with overlay */}
+                  <div className="aspect-4/3 relative overflow-hidden rounded-2xl">
+                    {project.imageUrl ? (
+                      <>
+                        <img
+                          src={project.imageUrl}
+                          alt={project.name}
+                          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
+                      </>
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-600" />
+                    )}
+                  </div>
+
+                  {/* Project info */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 px-3 py-1.5 rounded-full text-xs font-bold">
+                        {project.type}
+                      </span>
+                      <span className="text-xs bg-white/20 backdrop-blur-sm px-2 py-1 rounded">
+                        {project.progress}
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2">{project.name}</h3>
+                    <div className="flex items-center gap-4 text-sm">
+                      <div className="flex items-center gap-1">
+                        <MapPin className="w-4 h-4 text-gray-300" />
+                        <span className="text-gray-300">{project.location}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Home className="w-4 h-4 text-amber-400" />
+                        <span className="text-amber-400 font-semibold">{project.units}</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2 mt-4 text-xs">
+                      <Calendar className="w-4 h-4" />
+                      <span>Completion: {project.completion}</span>
+                    </div>
+                  </div>
+                  
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <button className="w-full bg-gradient-to-r from-amber-400 to-cyan-500 text-white py-3 rounded-lg font-bold hover:from-amber-500 hover:to-cyan-600 transition-all">
+                      View Case Study
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <a 
+            <a
               href="/projects"
-              className="inline-flex items-center bg-slate-900 text-white px-10 py-4 rounded-lg hover:bg-slate-800 transition-all shadow-xl font-bold gap-2"
+              className="group relative inline-flex items-center justify-center bg-gradient-to-r from-slate-900 to-slate-800 text-white px-10 py-4 rounded-xl font-bold hover:from-slate-800 hover:to-slate-700 transition-all shadow-xl gap-3"
             >
-              View Full Portfolio <ArrowRight />
+              <span className="relative z-10">View Full Portfolio</span>
+              <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-30 transition-opacity"></div>
             </a>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-linear-to-br from-slate-900 via-blue-900 to-slate-800 text-white">
-        <div className="container mx-auto px-6 lg:px-12 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Let&apos;s Build Something<br />
-            <span className="text-amber-400">That Lasts.</span>
-          </h2>
-          <p className="text-xl mb-10 max-w-2xl mx-auto text-gray-200">
-            Book your consultation today and partner with a developer that understands both community and capital.
-          </p>
-          <a 
-            href="/contact"
-            className="inline-block bg-amber-500 text-slate-900 px-12 py-5 text-xl font-bold rounded-lg hover:bg-amber-400 transition-all shadow-2xl"
-          >
-            Book a Consultation
-          </a>
+      {/* CTA Section - Enhanced */}
+      <section className="relative py-20 overflow-hidden">
+        {/* Background with animated elements */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+          <div className="absolute top-0 left-0 w-64 h-64 bg-amber-400/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="container mx-auto px-6 lg:px-12 relative z-10 text-center">
+          <div className="max-w-3xl mx-auto">
+            <Sparkles className="w-12 h-12 text-amber-400 mx-auto mb-6" />
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Let&apos;s Build Something
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-white to-cyan-500">
+                That Lasts.
+              </span>
+            </h2>
+            <p className="text-xl mb-10 max-w-2xl mx-auto text-gray-200">
+              Book your consultation today and partner with a developer that
+              understands both community and capital.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="group relative inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 px-12 py-5 text-xl font-bold rounded-xl hover:from-amber-500 hover:to-amber-400 transition-all shadow-2xl"
+              >
+                <span className="relative z-10">Book a Consultation</span>
+                <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-30 transition-opacity"></div>
+              </a>
+              <a
+                href="/about"
+                className="group relative inline-flex items-center justify-center bg-white/10 backdrop-blur-sm text-white px-8 py-5 text-lg font-bold rounded-xl border border-white/20 hover:bg-white/20 transition-all"
+              >
+                Learn About Us
+                <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
