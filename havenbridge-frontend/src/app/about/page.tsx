@@ -95,7 +95,7 @@ export default function AboutPage() {
       bio: "Former banker with 12 years of development experience across townhouses, rooming houses, shopping centres, mixed-use projects, SDA accommodation, NDIS housing, and community accommodation. Highly experienced in planning approvals and on-time, on-budget project delivery.",
       expertise: ["Project Delivery", "Development Planning", "NDIS/SDA"],
       color: "from-cyan-500 to-blue-500",
-      image: "/leadership/angok-lueth.jpg" // Replace with actual image path
+      image: "/team/Angok-Lueth.png"
     },
     {
       name: "Him Malhotra",
@@ -103,7 +103,7 @@ export default function AboutPage() {
       bio: "Land acquisition specialist with extensive networks across Melbourne's key growth corridors. Proven ability to source off-market sites and structure complex development deals that unlock value for community benefit.",
       expertise: ["Land Acquisition", "Deal Structuring", "Market Analysis"],
       color: "from-emerald-500 to-green-500",
-      image: "/leadership/him-malhotra.jpg" // Replace with actual image path
+      image: "/team/Mohatra.png"
     }
   ];
 
@@ -436,7 +436,7 @@ export default function AboutPage() {
                     <div className={`h-2 bg-linear-to-br ${person.color}`}></div>
                     
                     {/* Image Section */}
-                    <div className="relative h-95 overflow-hidden">
+                    <div className="relative h-80 overflow-hidden">
                       <div className="absolute inset-0 bg-linear-to-b from-transparent to-slate-900/20 z-10"></div>
                       <Image
                         src={person.image}
