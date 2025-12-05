@@ -219,7 +219,7 @@ export default function HavenBridgeLanding() {
             <div>
               {/* Animated header */}
               <div className="relative inline-block mb-4">
-                <Sparkles className="absolute -top-4 -left-4 w-8 h-8 text-amber-400 animate-pulse" />
+                
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                   Building
                   <span className="block">
@@ -241,10 +241,10 @@ export default function HavenBridgeLanding() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="/contact"
-                  className="group relative inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:from-amber-500 hover:to-amber-400 transition-all shadow-xl overflow-hidden"
+                  className="group relative inline-flex items-center justify-center bg-linear-to-r from-amber-400 to-amber-500 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:from-amber-500 hover:to-amber-400 transition-all shadow-xl overflow-hidden"
                 >
                   {/* Glow effect */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-30 transition-opacity"></div>
+                  <div className="absolute -inset-1 bg-linear-to-r from-amber-400 to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-30 transition-opacity"></div>
                   <span className="relative z-10">Book a Consultation</span>
                   <ArrowRight className="relative z-10 w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
@@ -260,9 +260,7 @@ export default function HavenBridgeLanding() {
 
             <div className="relative">
               {/* Hero image with effects */}
-              <div className="relative aspect-4/3 group">
-                {/* Glow border */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-amber-400 to-cyan-500 rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+              <div className="">
                 
                 <div className="relative rounded-3xl shadow-2xl overflow-hidden border-4 border-white/10">
                   <div className="relative w-full h-full rounded-2xl overflow-hidden">
@@ -272,30 +270,17 @@ export default function HavenBridgeLanding() {
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                     />
                     {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
+                    <div className="absolute inset-0 bg-linear-to-t from-slate-900/40 to-transparent"></div>
                   </div>
                 </div>
-                
-                {/* Floating stats */}
-                <div className="absolute -bottom-4 -right-4 bg-white rounded-xl p-4 shadow-2xl">
-                  <div className="flex items-center gap-3">
-                    <div className="bg-cyan-500 p-2 rounded-lg">
-                      <Home className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-slate-900">500+</div>
-                      <div className="text-xs text-gray-600">Homes Built</div>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 bg-gradient-to-r from-slate-50 to-cyan-50">
+      <section className="py-12 bg-linear-to-r from-slate-50 to-cyan-50">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, i) => {
@@ -336,7 +321,7 @@ export default function HavenBridgeLanding() {
             {services.map((service, i) => (
               <div key={i} className="group relative">
                 {/* Glow effect */}
-                <div className="absolute -inset-2 bg-gradient-to-r from-amber-400/20 to-cyan-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+                <div className="absolute -inset-2 bg-linear-to-r from-amber-400/20 to-cyan-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
                 
                 <a
                   href={service.link}
@@ -351,16 +336,16 @@ export default function HavenBridgeLanding() {
                           alt={service.title}
                           className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+                        <div className="absolute inset-0 bg-linear-to-t from-slate-900/60 via-transparent to-transparent"></div>
                       </>
                     ) : (
-                      <div className={`w-full h-full bg-gradient-to-br ${service.color} flex items-center justify-center`}>
+                      <div className={`w-full h-full bg-linear-to-br ${service.color} flex items-center justify-center`}>
                         <service.icon className="w-16 h-16 text-white/80" />
                       </div>
                     )}
                     
                     {/* Icon badge */}
-                    <div className={`absolute top-4 left-4 p-3 rounded-lg bg-gradient-to-br ${service.color}`}>
+                    <div className={`absolute top-4 left-4 p-3 rounded-lg bg-linear-to-br ${service.color}`}>
                       <service.icon className="w-6 h-6 text-white" />
                     </div>
                     
@@ -398,7 +383,7 @@ export default function HavenBridgeLanding() {
             </p>
             <a
               href="/contact"
-              className="group relative inline-flex items-center justify-center bg-gradient-to-r from-slate-900 to-slate-800 text-white px-8 py-3 rounded-lg font-bold hover:from-slate-800 hover:to-slate-700 transition-all shadow-lg"
+              className="group relative inline-flex items-center justify-center bg-linear-to-r from-slate-900 to-slate-800 text-white px-8 py-3 rounded-lg font-bold hover:from-slate-800 hover:to-slate-700 transition-all shadow-lg"
             >
               <span className="relative z-10">Contact Our Experts</span>
               <ArrowRight className="relative z-10 w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -408,7 +393,7 @@ export default function HavenBridgeLanding() {
       </section>
 
       {/* Why HavenBridge - Enhanced */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-cyan-50">
+      <section className="py-20 bg-linear-to-br from-slate-50 via-white to-cyan-50">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-amber-400/10 rounded-full">
@@ -430,11 +415,11 @@ export default function HavenBridgeLanding() {
               return (
                 <div key={i} className="group relative">
                   {/* Background glow */}
-                  <div className={`absolute -inset-2 bg-gradient-to-br ${item.color} rounded-2xl blur-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                  <div className={`absolute -inset-2 bg-linear-to-br ${item.color} rounded-2xl blur-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
                   
                   <div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border border-gray-100">
                     {/* Icon */}
-                    <div className={`p-4 rounded-xl bg-gradient-to-br ${item.color} w-fit mb-6`}>
+                    <div className={`p-4 rounded-xl bg-linear-to-br ${item.color} w-fit mb-6`}>
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     
@@ -447,7 +432,7 @@ export default function HavenBridgeLanding() {
                     
                     {/* Hover indicator */}
                     <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <div className="w-2 h-2 bg-gradient-to-r from-amber-400 to-cyan-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-linear-to-r from-amber-400 to-cyan-500 rounded-full"></div>
                     </div>
                   </div>
                 </div>
@@ -460,7 +445,7 @@ export default function HavenBridgeLanding() {
     
 
       {/* Featured Projects - Enhanced */}
-      <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
+      <section className="py-20 bg-linear-to-b from-slate-50 to-white">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between mb-16">
             <div>
@@ -489,14 +474,14 @@ export default function HavenBridgeLanding() {
                 {/* Featured badge */}
                 {project.featured && (
                   <div className="absolute top-4 left-4 z-20">
-                    <span className="px-3 py-1.5 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 text-xs font-bold rounded-full flex items-center gap-1">
+                    <span className="px-3 py-1.5 bg-linear-to-r from-amber-400 to-amber-500 text-slate-900 text-xs font-bold rounded-full flex items-center gap-1">
                       <Star className="w-3 h-3" /> FEATURED
                     </span>
                   </div>
                 )}
                 
                 {/* Glow effect */}
-                <div className="absolute -inset-2 bg-gradient-to-r from-amber-400/20 to-cyan-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+                <div className="absolute -inset-2 bg-linear-to-r from-amber-400/20 to-cyan-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
                 
                 <div className="relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 group">
                   {/* Image with overlay */}
@@ -508,17 +493,17 @@ export default function HavenBridgeLanding() {
                           alt={project.name}
                           className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
+                        <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent" />
                       </>
                     ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-600" />
+                      <div className="w-full h-full bg-linear-to-br from-slate-800 to-slate-600" />
                     )}
                   </div>
 
                   {/* Project info */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 px-3 py-1.5 rounded-full text-xs font-bold">
+                      <span className="bg-linear-to-r from-amber-400 to-amber-500 text-slate-900 px-3 py-1.5 rounded-full text-xs font-bold">
                         {project.type}
                       </span>
                       <span className="text-xs bg-white/20 backdrop-blur-sm px-2 py-1 rounded">
@@ -543,8 +528,8 @@ export default function HavenBridgeLanding() {
                   </div>
                   
                   {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <button className="w-full bg-gradient-to-r from-amber-400 to-cyan-500 text-white py-3 rounded-lg font-bold hover:from-amber-500 hover:to-cyan-600 transition-all">
+                  <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <button className="w-full bg-linear-to-r from-amber-400 to-cyan-500 text-white py-3 rounded-lg font-bold hover:from-amber-500 hover:to-cyan-600 transition-all">
                       View Case Study
                     </button>
                   </div>
@@ -556,11 +541,11 @@ export default function HavenBridgeLanding() {
           <div className="text-center mt-12">
             <a
               href="/projects"
-              className="group relative inline-flex items-center justify-center bg-gradient-to-r from-slate-900 to-slate-800 text-white px-10 py-4 rounded-xl font-bold hover:from-slate-800 hover:to-slate-700 transition-all shadow-xl gap-3"
+              className="group relative inline-flex items-center justify-center bg-linear-to-r from-slate-900 to-slate-800 text-white px-10 py-4 rounded-xl font-bold hover:from-slate-800 hover:to-slate-700 transition-all shadow-xl gap-3"
             >
               <span className="relative z-10">View Full Portfolio</span>
               <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-30 transition-opacity"></div>
+              <div className="absolute -inset-1 bg-linear-to-r from-amber-400 to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-30 transition-opacity"></div>
             </a>
           </div>
         </div>
@@ -569,7 +554,7 @@ export default function HavenBridgeLanding() {
       {/* CTA Section - Enhanced */}
       <section className="relative py-20 overflow-hidden">
         {/* Background with animated elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+        <div className="absolute inset-0 bg-linear-to-br from-slate-900 via-blue-900 to-slate-800">
           <div className="absolute top-0 left-0 w-64 h-64 bg-amber-400/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
@@ -580,7 +565,7 @@ export default function HavenBridgeLanding() {
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Let&apos;s Build Something
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-white to-cyan-500">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-amber-400 via-white to-cyan-500">
                 That Lasts.
               </span>
             </h2>
@@ -591,10 +576,10 @@ export default function HavenBridgeLanding() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="group relative inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 px-12 py-5 text-xl font-bold rounded-xl hover:from-amber-500 hover:to-amber-400 transition-all shadow-2xl"
+                className="group relative inline-flex items-center justify-center bg-linear-to-r from-amber-400 to-amber-500 text-slate-900 px-12 py-5 text-xl font-bold rounded-xl hover:from-amber-500 hover:to-amber-400 transition-all shadow-2xl"
               >
                 <span className="relative z-10">Book a Consultation</span>
-                <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-30 transition-opacity"></div>
+                <div className="absolute -inset-1 bg-linear-to-r from-amber-400 to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-30 transition-opacity"></div>
               </a>
               <a
                 href="/about"

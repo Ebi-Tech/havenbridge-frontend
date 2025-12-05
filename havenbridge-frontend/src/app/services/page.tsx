@@ -6,14 +6,16 @@ import {
   Building, 
   Baby, 
   Heart, 
-  HeartHandshake, 
-  Handshake,
+  Users,
+  Trees,
   CheckCircle2,
   ArrowRight,
-  Shield,
-  Target,
-  TrendingUp,
-  Award
+  ChevronRight,
+  Building2,
+  HomeIcon,
+  BedDouble,
+  ShieldCheck,
+  ClipboardCheck
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -22,85 +24,98 @@ export default function ServicesPage() {
   const services = [
     { 
       icon: Home, 
-      title: "Affordable & Social Housing Development",
-      desc: "Turnkey affordable and social housing developments delivered in partnership with NGOs, housing associations, councils, and government programs including HAFF and the Big Housing Build.",
+      title: "Affordable & Social Housing",
+      desc: "We partner with NGOs, housing associations, councils, and government programs including HAFF and the Big Housing Build. We deliver turnkey developments aligned to planning frameworks.",
       features: [
-        "Feasibility, design, and delivery of affordable and social housing projects",
-        "Alignment with federal and state programs including HAFF and Big Housing Build",
-        "Partnerships with community housing providers and NGOs",
-        "Planning and delivery frameworks that support long-term social outcomes"
+        "Partnerships with NGOs & housing associations",
+        "Alignment with HAFF and Big Housing Build",
+        "Council and government program collaboration",
+        "Turnkey development delivery",
+        "Planning framework compliance"
       ],
-      link: "/contact"
+      link: "/contact",
+      color: "from-blue-600 to-cyan-500"
     },
     { 
       icon: Building, 
-      title: "Rooming Houses & Community Accommodation",
-      desc: "High-yield, fully compliant rooming house and community accommodation projects across Wyndham, Brimbank, Casey, Dandenong and other key growth corridors.",
+      title: "Rooming House Development",
+      desc: "We deliver compliant, high-yield rooming house projects in Wyndham, Brimbank, Casey, and Dandenong. Includes feasibility, building design, permits, and construction management.",
       features: [
-        "End-to-end delivery of compliant rooming house developments",
-        "Expertise across Wyndham, Brimbank, Casey, Dandenong and key growth areas",
-        "Feasibility assessments, design management, and permits",
-        "Construction management focused on on-time, on-budget outcomes"
+        "Compliant rooming house projects",
+        "Focus on Wyndham, Brimbank, Casey, Dandenong",
+        "High-yield investment returns",
+        "End-to-end project delivery",
+        "Full permit management"
       ],
-      link: "/contact"
+      link: "/contact",
+      color: "from-amber-600 to-orange-500"
     },
     { 
       icon: Heart, 
       title: "Aged Care & NDIS Developments", 
-      desc: "Faith- and culturally-aligned aged care homes and supported-living solutions, including SIL and SDA-compliant housing.",
+      desc: "Faith- and culturally-aligned aged care homes and supported-living solutions. Includes SIL and SDA-compliant housing development.",
       features: [
-        "Design and delivery of aged care and supported independent living environments",
-        "SDA and NDIS-compliant housing solutions",
-        "Culturally responsive models of care and accommodation",
-        "Integration with faith-based and community organisations"
+        "Faith- and culturally-aligned designs",
+        "Aged care home development",
+        "Supported-living solutions",
+        "SIL and SDA compliance",
+        "Specialized disability housing"
       ],
-      link: "/contact"
+      link: "/contact",
+      color: "from-emerald-600 to-teal-500"
     },
     { 
       icon: Baby, 
       title: "Childcare Centre Development", 
-      desc: "End-to-end childcare centre development from site identification through to compliant delivery aligned with Victorian Education & Care regulations.",
+      desc: "We identify sites, secure planning permits, manage design, and deliver fully compliant childcare centres aligned to Victorian Education & Care regulations.",
       features: [
-        "Site identification and feasibility studies",
-        "Planning permits and stakeholder engagement",
-        "Design and delivery aligned with Victorian Education & Care regulations",
-        "Centres designed for safety, learning, and community engagement"
+        "Site identification & feasibility",
+        "Planning permit acquisition",
+        "Design management",
+        "Victorian Education & Care compliance",
+        "Full project delivery"
       ],
-      link: "/contact"
+      link: "/contact",
+      color: "from-pink-600 to-rose-500"
     },
     { 
-      icon: HeartHandshake, 
+      icon: Trees, 
       title: "Cabin Parks & Modular Housing", 
-      desc: "Modular cabin parks for transitional housing, crisis accommodation, workers villages, and faith-based community housing.",
+      desc: "We specialise in modular cabin parks for transitional housing, crisis accommodation, workers villages, and faith-based community housing.",
       features: [
-        "Design and delivery of modular cabin parks for transitional and crisis accommodation",
-        "Solutions for workers villages and regional communities",
-        "Flexible, scalable layouts tailored to community and stakeholder needs",
-        "Fast deployment using high-quality modular construction"
+        "Modular cabin park development",
+        "Transitional & crisis accommodation",
+        "Workers village solutions",
+        "Faith-based community housing",
+        "Rapid deployment projects"
       ],
-      link: "/contact"
+      link: "/contact",
+      color: "from-green-600 to-lime-500"
     },
     { 
-      icon: Handshake, 
+      icon: Building2, 
       title: "Development & Project Management", 
-      desc: "End-to-end development and project management across feasibility, approvals, procurement, and delivery.",
+      desc: "Full project lifecycle management: Feasibility, Council approvals, Builder procurement, Project oversight, Budgets & reporting, Risk management.",
       features: [
-        "Full lifecycle management from concept to completion",
-        "Feasibility studies and option analysis",
-        "Stakeholder and council engagement",
-        "Builder procurement and contract management"
+        "Feasibility & planning",
+        "Council approvals management",
+        "Builder procurement",
+        "Project oversight",
+        "Budget & financial reporting",
+        "Risk management"
       ],
-      link: "/contact"
+      link: "/contact",
+      color: "from-purple-600 to-violet-500"
     }
   ];
 
-  const developmentManagementFeatures = [
-    "Feasibility",
-    "Council approvals",
-    "Builder procurement",
-    "Project oversight",
-    "Budgets & reporting",
-    "Risk management"
+  const projectManagementSteps = [
+    { title: "Feasibility", icon: ClipboardCheck },
+    { title: "Council Approvals", icon: ShieldCheck },
+    { title: "Builder Procurement", icon: Building2 },
+    { title: "Project Oversight", icon: HomeIcon },
+    { title: "Budgets & Reporting", icon: ClipboardCheck },
+    { title: "Risk Management", icon: ShieldCheck }
   ];
 
   return (
@@ -116,8 +131,7 @@ export default function ServicesPage() {
               Our <span className="text-amber-400">Services</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive property development solutions across Australia—centred on affordable housing, social impact, and
-              multicultural communities.
+              Comprehensive property development solutions focused on affordable housing, social impact, and community infrastructure.
             </p>
           </div>
         </div>
@@ -126,32 +140,42 @@ export default function ServicesPage() {
       {/* Services Grid */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6 lg:px-12">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+              Our Core Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We deliver end-to-end development solutions across key sectors, ensuring quality, compliance, and community impact.
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, i) => (
               <div 
                 key={i} 
-                className="group relative overflow-hidden rounded-2xl bg-linear-to-br from-slate-900 to-slate-800 p-8 hover:shadow-2xl transition-all duration-300"
+                className="group relative overflow-hidden rounded-2xl bg-white border border-gray-200 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="bg-cyan-500 inline-block p-4 rounded-lg mb-6">
+                <div className={`inline-flex p-4 rounded-xl bg-linear-to-br ${service.color} mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.desc}</p>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">{service.title}</h3>
+                <p className="text-gray-600 mb-6">{service.desc}</p>
                 
-                <ul className="space-y-3 mb-6">
+                <div className="space-y-3 mb-8">
                   {service.features.map((feature, j) => (
-                    <li key={j} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-300 text-sm">{feature}</span>
-                    </li>
+                    <div key={j} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
+                      <span className="text-gray-700 text-sm">{feature}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
                 
                 <a 
                   href={service.link}
-                  className="inline-flex items-center text-amber-400 font-semibold group-hover:gap-2 transition-all"
+                  className="inline-flex items-center font-semibold text-slate-900 hover:text-amber-600 group-hover:gap-2 transition-all border-t border-gray-100 pt-6 w-full justify-between"
                 >
-                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                  <span>Discuss this service</span>
+                  <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
             ))}
@@ -159,39 +183,139 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Development & Project Management */}
-      <section className="py-20 bg-gray-50">
+      {/* Development & Project Management Focus */}
+      <section className="py-20 bg-linear-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-10">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-cyan-500 inline-flex p-4 rounded-lg">
-                <Handshake className="w-8 h-8 text-white" />
-              </div>
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-                  Development & Project Management
-                </h2>
-                <p className="text-gray-600 text-sm md:text-base">
-                  Full project lifecycle management from early feasibility through to delivery and handover.
-                </p>
-              </div>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+                Development & Project Management
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Full project lifecycle management from early feasibility through to delivery and handover.
+              </p>
             </div>
 
-            <ul className="space-y-3 mb-6">
-              {developmentManagementFeatures.map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700 text-sm md:text-base">{item}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <div className="grid lg:grid-cols-2">
+                {/* Left Column - Content */}
+                <div className="p-8 md:p-12">
+                  <div className="inline-flex p-4 rounded-xl bg-linear-to-br from-purple-600 to-violet-500 mb-6">
+                    <Building2 className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-3xl font-bold text-slate-900 mb-4">
+                    Comprehensive Project Lifecycle Management
+                  </h3>
+                  <p className="text-gray-600 mb-8 text-lg">
+                    We manage every aspect of your development project, ensuring seamless execution from concept to completion.
+                  </p>
+                  
+                  <div className="grid sm:grid-cols-2 gap-6 mb-8">
+                    {projectManagementSteps.map((step, index) => (
+                      <div key={index} className="flex items-start gap-3">
+                        <div className="bg-purple-100 p-2 rounded-lg">
+                          <step.icon className="w-5 h-5 text-purple-600" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-slate-900">{step.title}</h4>
+                          <p className="text-sm text-gray-600 mt-1">
+                            Expert management and oversight
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
 
-            <a
-              href="/contact"
-              className="inline-flex items-center text-amber-500 font-semibold hover:gap-2 transition-all"
-            >
-              Discuss a project <ArrowRight className="w-4 h-4 ml-1" />
-            </a>
+                  <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                    <h4 className="font-bold text-slate-900 text-lg mb-2">Our Approach:</h4>
+                    <p className="text-gray-700">
+                      We combine strategic planning with hands-on project management to deliver your development on time, within budget, and to the highest quality standards.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Right Column - Visual/Stats */}
+                <div className="bg-linear-to-br from-slate-900 to-slate-800 p-8 md:p-12 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-6">Why Choose Our Management?</h3>
+                    <ul className="space-y-4">
+                      {[
+                        "Proven track record across all project types",
+                        "Deep understanding of council & regulatory requirements",
+                        "Strong builder & supplier networks",
+                        "Transparent reporting & communication",
+                        "Risk-mitigation focused approach",
+                        "Community & stakeholder engagement expertise"
+                      ].map((item, index) => (
+                        <li key={index} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+                          <span className="text-gray-300">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center justify-center gap-2 bg-amber-500 text-slate-900 px-6 py-4 rounded-lg font-bold text-lg hover:bg-amber-400 transition-all mt-8 w-full"
+                  >
+                    Start Your Project
+                    <ArrowRight className="w-5 h-5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sector Expertise */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+              Sector Expertise
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Specialized knowledge across key development sectors
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Affordable Housing",
+                desc: "HAFF & Big Housing Build aligned",
+                icon: Home,
+                color: "bg-blue-100 text-blue-600"
+              },
+              {
+                title: "Community Housing",
+                desc: "NGO & council partnerships",
+                icon: Users,
+                color: "bg-emerald-100 text-emerald-600"
+              },
+              {
+                title: "Specialist Disability",
+                desc: "SDA & SIL compliant housing",
+                icon: Heart,
+                color: "bg-purple-100 text-purple-600"
+              },
+              {
+                title: "Early Childhood",
+                desc: "Victorian Education & Care compliant",
+                icon: Baby,
+                color: "bg-pink-100 text-pink-600"
+              }
+            ].map((sector, index) => (
+              <div key={index} className="bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-gray-300 transition-all">
+                <div className={`inline-flex p-3 rounded-lg ${sector.color} mb-4`}>
+                  <sector.icon className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">{sector.title}</h3>
+                <p className="text-gray-600">{sector.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -205,12 +329,20 @@ export default function ServicesPage() {
           <p className="text-xl mb-10 max-w-2xl mx-auto text-gray-200">
             Get in touch with our team to discuss how we can help bring your vision to life.
           </p>
-          <a 
-            href="/contact"
-            className="inline-block bg-amber-500 text-slate-900 px-12 py-5 text-xl font-bold rounded-lg hover:bg-amber-400 transition-all shadow-2xl"
-          >
-            Contact Us Today
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/contact"
+              className="inline-block bg-amber-500 text-slate-900 px-8 py-4 text-lg font-bold rounded-lg hover:bg-amber-400 transition-all shadow-xl"
+            >
+              Contact Us Today
+            </a>
+            <a 
+              href="/contact#consultation"
+              className="inline-block bg-transparent border-2 border-amber-500 text-amber-500 px-8 py-4 text-lg font-bold rounded-lg hover:bg-amber-500 hover:text-slate-900 transition-all"
+            >
+              Book a Consultation
+            </a>
+          </div>
         </div>
       </section>
 
@@ -218,4 +350,3 @@ export default function ServicesPage() {
     </div>
   );
 }
-
