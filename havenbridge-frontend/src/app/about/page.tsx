@@ -192,13 +192,6 @@ export default function AboutPage() {
                 <span className="block mt-4">Not Just Buildings</span>
               </h1>
 
-              {/* Subtitle */}
-              <p className="text-xl text-gray-300 max-w-xl mb-12 leading-relaxed">
-                A values-led property development firm bridging capital, policy,
-                and community to create meaningful housing solutions for modern
-                Australia.
-              </p>
-
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -221,37 +214,19 @@ export default function AboutPage() {
 
             {/* Right Column - Hero Image (Hidden on Mobile) */}
             <div className="hidden lg:block relative">
-              <div className="relative h-[500px] rounded-2xl overflow-hidden">
+              <div className="relative h-[420px]  rounded-2xl overflow-hidden">
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-linear-to-t from-slate-900/60 via-transparent to-slate-900/20 z-10"></div>
 
                 {/* Main Image */}
-                <div className="absolute inset-0">
-                  <div className="absolute inset-0 bg-linear-to-br from-amber-400/20 to-cyan-500/20"></div>
-                  {/* Image placeholder - replace with actual image */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-900">
-                    {/* Abstract building silhouette */}
-                    <div className="absolute bottom-0 left-0 right-0">
-                      <div className="h-48 bg-linear-to-t from-slate-900 via-slate-800 to-transparent"></div>
-                    </div>
-
-                    {/* Building shapes */}
-                    <div className="absolute bottom-0 left-1/4 w-16 h-32 bg-cyan-500/30 rounded-t-lg"></div>
-                    <div className="absolute bottom-0 left-2/4 transform -translate-x-1/2 w-20 h-40 bg-amber-400/30 rounded-t-lg"></div>
-                    <div className="absolute bottom-0 right-1/4 w-14 h-36 bg-emerald-500/30 rounded-t-lg"></div>
-
-                    {/* City lights */}
-                    <div className="absolute bottom-8 left-1/4 transform -translate-x-1/2">
-                      <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
-                    </div>
-                    <div className="absolute bottom-12 right-1/3">
-                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse delay-300"></div>
-                    </div>
-                    <div className="absolute bottom-16 left-1/3">
-                      <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse delay-700"></div>
-                    </div>
-                  </div>
-                </div>
+                <Image
+                  src="/hero-images/about.jpg"
+                  alt="HavenBridge Development - Community-focused housing solutions"
+                  fill
+                  className="object-fill"
+                  sizes="(max-width: 1024px) 0px, 50vw"
+                  priority
+                />
 
                 {/* Floating Elements */}
                 <div className="absolute top-6 right-6 z-20">
